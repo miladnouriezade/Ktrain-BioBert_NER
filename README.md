@@ -32,7 +32,7 @@ Use `train-dev.tsv` for training and `test.tsv` for validation.
 
 ## Learning rate hyper-parameter
 We used `lr_find()` to find optimal learning rate. optimal lr is approximately 1e-3 .
-<img src="https://gitlab.com/nlp-projects/ktrain/pic/lr_find.png" width="600" height="400" />
+<img src="https://gitlab.com/nlp-projects/ktrain/-/blob/master/pic/lr_find.png" width="600" height="400" />
 
 
 ## Train and validate model
@@ -40,7 +40,8 @@ Use `python run_ner.py` to train and validate model.
 
 # Result
 We got the best result using SGDR learning rate scheduler on `BC5CDR-IOB` with `lr=1e-3`,`n_cycles=3`, `cycle_len=1` and `cycle_mult=2`. weights are availabel in `weights` folder.
-<img src="https://gitlab.com/nlp-projects/ktrain/pic/SGDR.png" width="600" height="400" />
+<img src="https://gitlab.com/nlp-projects/ktrain/-/blob/master/pic/SGDR.png" width="600" height="400" />
+
 | | precision  | recall  | f1-score  | support  |
 |---|---|---|---|---|
 |  Chemical | 0.91  | 091  |  0.91 |5385
@@ -50,6 +51,7 @@ We got the best result using SGDR learning rate scheduler on `BC5CDR-IOB` with `
 
 ## Result using fastText
 We used `crawl-300d-2M-subword` from [fastext pre-trained word vectors](https://fasttext.cc/docs/en/english-vectors.html) instead of randomly initialized word embeddings with the same parameters and data as before .
+
 | | precision  | recall  | f1-score  | support  |
 |---|---|---|---|---|
 |  Disease | 0.76  | 0.79  |  0.77 |4424
@@ -59,6 +61,7 @@ We used `crawl-300d-2M-subword` from [fastext pre-trained word vectors](https://
 
 ## Result using fastText and BILOU schemed data
 In this expriment we used `BC5CDR-BILOU` _ BILOU schemed data set instead of IOB with `crawl-300d-2M-subword`(fastText word vector) and same parameters.
+
 | | precision  | recall  | f1-score  | support  |
 |---|---|---|---|---|
 |  Chemical | 0.91  | 0.74  |  0.82 |5374
