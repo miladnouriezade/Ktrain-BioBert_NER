@@ -34,8 +34,6 @@ Use `train-dev.tsv` for training and `test.tsv` for validation.
 We used `lr_find()` to find optimal learning rate. optimal lr is approximately 1e-3 .
 
 ![lr_find](pic/lr_find.png)
-<img src="https://gitlab.com/nlp-projects/ktrain/-/blob/master/pic/lr_find.png"  width="500" height="300">
-
 
 ## Train and validate model
 Use `python run_ner.py` to train and validate model.
@@ -44,7 +42,6 @@ Use `python run_ner.py` to train and validate model.
 We got the best result using SGDR learning rate scheduler on `BC5CDR-IOB` with `lr=1e-3`,`n_cycles=3`, `cycle_len=1` and `cycle_mult=2`. weights are availabel in `weights` folder.
 
 ![SGDR](pic/SGDR.png)
-<img src="https://gitlab.com/nlp-projects/ktrain/-/blob/master/pic/SGDR.png"  width="500" height="300">
 
 | | precision  | recall  | f1-score  | support  |
 |---|---|---|---|---|
